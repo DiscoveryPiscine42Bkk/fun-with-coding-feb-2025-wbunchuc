@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        .images-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .image-item {
+            margin: 0 20px;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: auto;
+        }
+        hr {
+            margin-top: 50px;
+            border: none;
+            border-top: 2px solid white;
+        }
+        .footer {
+            text-align: right;
+            font-family: "Courier New", monospace;
+            font-style: italic;
+            margin-top: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Online Shop</h1>
+
+    <div class="images-container">
+        <div class="image-item">
+            <img src="data:image/png;base64,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" alt="Shop 1">
+            <p><a href="https://www.uniqlo.com/th/th/" target="_blank">https://www.uniqlo.com/th/th/</a></p>
+        </div>
+        <div class="image-item">
+            <img src="data:image/png;base64,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" alt="Shop 2">
+            <p><a href="https://th.hm.com/th_th/" target="_blank">https://th.hm.com/th_th/</a></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        © wil 2024
+    </div>
+
+</body>
+</html>
