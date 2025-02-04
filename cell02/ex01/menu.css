@@ -1,21 +1,24 @@
 body {
+
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #fbfbfb;
 }
-
 nav {
-    background-color: transparent;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
@@ -25,7 +28,7 @@ nav ul li {
 nav ul li a {
     display: block;
     padding: 15px 20px;
-    color: white;
+    color: rgb(241, 241, 241);
     text-decoration: none;
     background-color: #007bff;
     border-radius: 5px;
@@ -40,11 +43,23 @@ nav ul ul {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 0;
+    padding: 10px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+nav ul ul li {
+    width: 100%;
 }
 
 nav ul ul li a {
@@ -52,7 +67,10 @@ nav ul ul li a {
     background-color: white;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
-    border-radius: 0;
+    display: block;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 nav ul ul li a:hover {
@@ -60,6 +78,18 @@ nav ul ul li a:hover {
 }
 
 nav ul li:hover > ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
     z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
 }
