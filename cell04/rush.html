@@ -8,29 +8,64 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .profile-img {
+            width: 150px;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+        .profile-text {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">My Portfolio</a>
         </div>
     </nav>
     
     <div class="container text-center mt-5">
-        <h1>Welcome to our Profile</h1>
-        <p>"้What do u wanna view":</p>
+        <h1>Welcome to Our Profile</h1>
+        <p>"What do you wanna view"</p>
         <div class="row mt-4">
             <div class="col-md-6">
                 <a href="profile1.html">
-                    <img src="d:\fun-with-coding-feb-2025-wbunchuc\cell04\test1.jpg" alt="Profile 1" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+                    <img src="d:\fun-with-coding-feb-2025-wbunchuc\cell04\test1.jpg" alt="Profile 1" class="profile-img">
                 </a>
-                <p class="mt-2">A</p>
+                <p class="profile-text">A</p>
             </div>
             <div class="col-md-6">
                 <a href="profile2.html">
-                    <img src="d:\fun-with-coding-feb-2025-wbunchuc\cell04\test2.jpg" alt="Profile 2" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+                    <img src="d:\fun-with-coding-feb-2025-wbunchuc\cell04\test2.jpg" alt="Profile 2" class="profile-img">
                 </a>
-                <p class="mt-2">B</p>
+                <p class="profile-text">B</p>
             </div>
         </div>
     </div>

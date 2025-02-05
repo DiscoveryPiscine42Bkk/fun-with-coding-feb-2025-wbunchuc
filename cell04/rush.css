@@ -1,31 +1,33 @@
-body {
+/*body {
+    background-color: #f4f4f9;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .button {
-    padding: 10px 20px;
+}
+.navbar {
     background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-  }
-  
-  .footer {
-    position: absolute;
-    bottom: 10px;
-    color: rgb(109, 185, 255);
-  }
-  
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+p {
+    color: #555;
+}
+.profile-img {
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.profile-img:hover {
+    transform: scale(1.1);
+}
+.profile-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
