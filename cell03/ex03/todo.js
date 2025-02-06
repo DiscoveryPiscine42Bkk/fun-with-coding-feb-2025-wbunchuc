@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (isLoading) {
-            todoList.appendChild(todoDiv); // โหลดจาก localStorage ให้เรียงตามที่บันทึกไว้
+            todoList.appendChild(todoDiv); 
         } else {
-            todoList.insertBefore(todoDiv, todoList.firstChild); // ให้รายการใหม่อยู่บนสุด
+            todoList.insertBefore(todoDiv, todoList.firstChild); 
         }
     }
 
