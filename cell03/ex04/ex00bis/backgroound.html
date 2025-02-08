@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HIT</title>
     <link rel="stylesheet" href="change-bg.css">
-    <!--jQuery -->
+    <!--โหลดjQueryตัวร้าย-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -14,10 +14,10 @@
 
     <script>
         $(document).ready(function() {
-            $("#changeBgBtn").click(function() {
-                const colors = ['#FFDDC1', '#FFD700', '#FF6F61', '#4CAF50', '#ADD8E6', '#8A2BE2'];
+            $("#changeBgBtn").click(function() { // รอคลิก changeBgBtn
+                const colors = ['#FFDDC1', '#FFD700', '#FF6F61', '#4CAF50', '#ADD8E6', '#8A2BE2']; //ผิวหนังอ่อน, เหลือง, แดงออกส้ม, เขียว, ฟ้าอ่อน, ม่วง
                 const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                $("body").css("background-color", randomColor);
+                $("body").css("background-color", randomColor);  // เปลี่ยนสีพื้นหลัง body
             });
         });
     </script>

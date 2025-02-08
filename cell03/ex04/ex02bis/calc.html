@@ -19,29 +19,29 @@
             <option value="%">%</option>
         </select>
         <input type="number" id="num2" placeholder="Enter second number" min="0">
-        <button id="calculateBtn">Try me!</button>
+        <button id="calculateBtn">guess !</button>
     </div>
 
     <script>
         $(document).ready(function() {
             function calculate() {
-                let num1 = parseInt($("#num1").val());
+                let num1 = parseInt($("#num1").val()); //parseInt str->int ดึงขอมูลมาจาก id1=num
                 let num2 = parseInt($("#num2").val());
                 let operator = $("#operator").val();
         
-                if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
-                    alert("Error :(");
+                if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) { // ต้องเป็นบวก ไม่ติดลบ
+                    alert("Error :(");//แสดง error
                     return;
                 }
         
                 let result;
-                if ((operator === "/" || operator === "%") && num2 === 0) {
+                if ((operator === "/" || operator === "%") && num2 === 0) { //หาค่าเศษของศูนย์
                     alert("It’s over 9000!");
                     console.log("It’s over 9000!");
                     return;
                 }
         
-                switch (operator) {
+                switch (operator) { //เช็คเครื่องหมายตัวด้านล่าง
                     case "+": result = num1 + num2; break;
                     case "-": result = num1 - num2; break;
                     case "*": result = num1 * num2; break;
@@ -49,15 +49,15 @@
                     case "%": result = num1 % num2; break;
                 }
         
-                alert("Result: " + result);
-                console.log("Result: " + result);
+                alert("Result: " + result); //แสดงคำตอบ
+                console.log("Result: " + result); //แสดงคำตอบตรงเบราว์เซอร์
             }
         
             $("button").click(calculate);
         
-            setInterval(() => {
+            setInterval(() => { 
                 alert("Please, use me...");
-            }, 30000);
+            }, 30000); //ว่ายาเมื่อ 30,000 ml/s ให้ขึ้น Please, use me
         });
     </script> 
 </body>

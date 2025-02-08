@@ -3,60 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explode This Balloon</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <title>Balloon Animation</title>
     <style>
-      
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
         #balloon {
             width: 200px;
             height: 200px;
             background-color: red;
             border-radius: 50%;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease-in-out;
             cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="balloon"></div>
-
-    <script>
-     
-        $(document).ready(function() {
-            let size = 200;
-            let colors = ['red', 'green', 'blue'];
-            let colorIndex = 0;
-        
-            $("#balloon").click(function() {
-                size += 10;
-                colorIndex = (colorIndex + 1) % colors.length;
-                $(this).css({
-                    "width": size + "px",
-                    "height": size + "px",
-                    "background-color": colors[colorIndex]
-                });
-        
-                if (size > 420) {
-                    size = 200;
-                    colorIndex = 0;
-                    $(this).css({
-                        "width": size + "px",
-                        "height": size + "px",
-                        "background-color": colors[colorIndex]
-                    });
-                }
-            });
+<div id="balloon"></div>
+<script>
+    $(document).ready(function () {
+        let size = 200; //ขนาดเริ่มต้นของบอลลูนเป็น200px
+        let colors = ['red', 'green', 'blue']; 
+        let colorIndex = 0; //เก็บค่าดัชนีของสีปัจจุบัน
+        function changeColor() {
+            colorIndex = (colorIndex + 1) % colors.length; //วนกลับไปสีแรกเมื่อครบทุกสี
+            $("#balloon").css("background-color", colors[colorIndex]); 
+        }
+        function shrinkBalloon() {
+            if (size > 200) { 
+                size -= 5;// ขนาดบอลลูนหดทีละ 5px แต่ไม่ต่ำกว่า 200px
+                $("#balloon").css({ width: size + "px", height: size + "px" });
+            }
+            colorIndex = (colorIndex - 1 + colors.length) % colors.length;//มีสามลบหนึ่ง เพื่อหาในอินเด็ก
+            $("#balloon").css("background-color", colors[colorIndex]);
+        }
+        $("#balloon").on("click", function () { // สำหรับการคลิกที่บอลลูน
+            if (size > 420) size = 200; 
+            else size += 10; 
+            $(this).css({ width: size + "px", height: size + "px" });
+            changeColor(); //เรียกเปลี่ยนสี
         });
-        
-    </script>
+        $("#balloon").on("mouseleave", shrinkBalloon); //เมื่อเมาส์ออกบอลลูนจะเรียก shrinkBalloon มันจะหดพลาดลงนี้()
+    });
+    
+</script>
 </body>
 </html>
