@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - ART</title>
+    <title>Profile - Art</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -43,11 +43,20 @@
         .social-links img:hover {
             transform: scale(1.2);
         }
-        .navbar .navbar-brand {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #444;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        
         .navbar .navbar-nav {
             display: flex;
             gap: 20px;
@@ -57,29 +66,33 @@
             text-decoration: none;
             transition: color 0.3s;
         }
-        .navbar a:hover {
-            color: #ff9800;
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 30px; 
+            margin: 0;
+            padding: 0;
         }
+        
+        
+        
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#social">Social Links</a></li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#social">Social Links</a></li>
+            <li><button class="home-button" onclick="location.href='index.html'">Home</button></li>
+        </ul>
     </nav>
-    <a href="index.html" class="back-btn">Home</a>
     <div class="profile-container">
         <div class="profile-content">
-            <img src="d:\fun-with-coding-feb-2025-wbunchu\Rush\pig\ART.JPG" alt="Profile Picture" class="profile-pic">
+            <img src="d:\fun-with-coding-feb-2025-wbunchu\rush\pig\ART.JPG" alt="Profile Picture" class="profile-pic">
             <div class="profile-info">
-                <h2>ART</h2>
+                <h2>Art</h2>
                 <p>Student</p>
                 <p>Faculty of Science, majoring in Statistics</p>
             </div>
@@ -100,17 +113,17 @@
         <div id="certificates" class="certificates">
             <h3>Certificates</h3>
             <div class="scroll-container">
-                <img src="d:\fun-with-coding-feb-2025-wbunchu\Rush\Certificates Art\DSC_0061.JPG" alt="Certificate 1">
-                <img src="d:\fun-with-coding-feb-2025-wbunchu\Rush\Certificates Art\DSC_0076.JPG" alt="Certificate 2">
-                <img src="d:\fun-with-coding-feb-2025-wbunchu\Rush\Certificates Art\DSC_0152.JPG" alt="Certificate 3">
+                <img src="d:\fun-with-coding-feb-2025-wbunchu\rush\Certificates Art\DSC_0076.JPG" alt="Certificate 1">
+                <img src="d:\fun-with-coding-feb-2025-wbunchu\rush\Certificates Art\DSC_0061.JPG" alt="Certificate 2">
+                <img src="d:\fun-with-coding-feb-2025-wbunchu\rush\Certificates Art\DSC_0152.JPG" alt="Certificate 3">
             </div>
         </div>
         <div id="social" class="social-links">
-            <a href="https://www.facebook.com/antinonameth/" target="_blank">
-                <img src="d:\fun-with-coding-feb-2025-wbunchu\Rush\logo\FB.png" alt="Facebook">
+            <a href="https://www.facebook.com/antinonameth" target="_blank">
+                <img src="d:\fun-with-coding-feb-2025-wbunchu\rush\logo\FB.png" alt="Facebook">
             </a>
             <a href="https://www.instagram.com/a_i_art/" target="_blank">
-                <img src="d:\fun-with-coding-feb-2025-wbunchu\Rush\logo\IG.png" alt="Instagram">
+                <img src="d:\fun-with-coding-feb-2025-wbunchu\rush\logo\IG.png" alt="Instagram">
             </a>
         </div>
     </div>
