@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <style>
         body {
             margin: 0;
@@ -49,50 +51,6 @@
     <div id="ft_list"></div>
     <button id="newTodoBtn">New</button>
 
-    <script src="todo.js">
-        $(document).ready(function() {
-            loadTodos();
-        
-            $("#newTodoBtn").click(function() {
-                let newTodo = prompt("Enter your new TO DO:");
-                if (newTodo && newTodo.trim() !== "") {
-                    addTodoToDOM(newTodo);
-                    saveTodos();
-                }
-            });
-        
-            function addTodoToDOM(todo, isLoading = false) {
-                let todoDiv = $("<div>").addClass("todo").text(todo);
-        
-                todoDiv.click(function() {
-                    if (confirm("Are you sure you want to remove this TO DO?")) {
-                        $(this).remove();
-                        saveTodos();
-                    }
-                });
-        
-                if (isLoading) {
-                    $("#ft_list").append(todoDiv);
-                } else {
-                    $("#ft_list").prepend(todoDiv);
-                }
-            }
-        
-            function saveTodos() {
-                let todos = [];
-                $(".todo").each(function() {
-                    todos.push($(this).text());
-                });
-                localStorage.setItem("todos", JSON.stringify(todos));
-            }
-        
-            function loadTodos() {
-                let todos = JSON.parse(localStorage.getItem("todos")) || [];
-                if (todos.length > 0) {
-                    todos.forEach(todo => addTodoToDOM(todo, true));
-                }
-            }
-        });
-    </script>
+    <script src="todo.js"></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIT</title>
+    <link rel="stylesheet" href="change-bg.css">
+    <!--jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <button id="changeBgBtn">HIT</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#changeBgBtn").click(function() {
+                const colors = ['#FFDDC1', '#FFD700', '#FF6F61', '#4CAF50', '#ADD8E6', '#8A2BE2'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                $("body").css("background-color", randomColor);
+            });
+        });
+    </script>
+</body>
+</html>

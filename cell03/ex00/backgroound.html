@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Background</title>
-    <link rel="stylesheet" type="text/css" href="background.css">
+    <link rel="stylesheet" href="change-bg.css">
 </head>
 <body>
-    <button onclick="changeBackgroundColor()">Hit me!!!</button>
+    <button id="changeBgBtn">Change Background</button>
+
     <script>
-        function changeBackgroundColor() {
-            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        const button = document.getElementById('changeBgBtn');
+        button.addEventListener('click', () => {
+            const colors = ['#FFDDC1', '#FFD700', '#FF6F61', '#4CAF50', '#ADD8E6', '#8A2BE2'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
             document.body.style.backgroundColor = randomColor;
-        }
+        });
     </script>
 </body>
 </html>
